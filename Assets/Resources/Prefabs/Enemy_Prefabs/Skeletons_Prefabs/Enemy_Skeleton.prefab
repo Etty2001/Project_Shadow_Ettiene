@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 4226601987053934852}
   - component: {fileID: 923784106020326719}
   - component: {fileID: 902030566619298417}
+  - component: {fileID: 1041033725636737086}
   m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
@@ -488,6 +489,7 @@ MonoBehaviour:
   backHealthSlider: {fileID: 0}
   backHealthImage: {fileID: 0}
   canDie: 1
+  EnimyHealthBar: {fileID: 0}
 --- !u!114 &902030566619298417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +504,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   aiBehaviour: {fileID: 0}
+--- !u!114 &1041033725636737086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354934962419596013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53dcbf1af1456ac42ad3393f0083849c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enimyHealth: {fileID: 0}
+  materialObjects:
+  - {fileID: 4610673994266180247}
+  - {fileID: 9066105766171095840}
+  - {fileID: 8269926708850910988}
 --- !u!1 &1450890224644127430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1677,7 @@ GameObject:
   - component: {fileID: 3251118073505715639}
   - component: {fileID: 3135942686436669318}
   - component: {fileID: 4628212174485050858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PT_Male_Skeleton_01_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
