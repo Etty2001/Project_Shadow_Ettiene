@@ -22,8 +22,11 @@ public class WeaponSystem : MonoBehaviour
     public AudioSource audioSource;
     public GameObject muzzleFlash, bulletHole;
 
-	// Basic Booleans
-	bool shooting, readyToShoot = true, reloading, mouseClicked;
+    // Basic Booleans
+    bool shooting, readyToShoot = true, reloading, m, mouseClicked, aimWeapons;
+    // Aimweapon
+    public Transform aimWeapon;
+    private float aimSpeed=2f;
 
     #endregion
 
@@ -37,6 +40,7 @@ public class WeaponSystem : MonoBehaviour
 
         inputManager.onFootActions.Shoot.started += ctx => mouseClicked = true;
 		inputManager.onFootActions.Shoot.canceled += ctx => mouseClicked = false;
+        
 
         inputManager.onFootActions.Reload.performed += ctx => WeaponReload();
 
@@ -140,6 +144,14 @@ public class WeaponSystem : MonoBehaviour
         bulletsLeft = magazineSize;
         reloading = false;
     }
+
+    private void Aiming()
+    {
+        if (Input.GetMouseButton(1))
+            transform.position = Vector3.MoveTowards(transform.position, aimWeapon.position, aimSpeed*Time.deltaTime);
+        
+    }
+
 
 	#endregion
 }	

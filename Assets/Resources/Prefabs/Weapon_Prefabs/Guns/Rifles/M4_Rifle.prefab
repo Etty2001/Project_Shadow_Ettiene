@@ -109,7 +109,7 @@ PrefabInstance:
     - target: {fileID: 4245728957341605521, guid: 72944fbde26aed6438ce0e07315e82be,
         type: 3}
       propertyPath: whatIsDamagable.m_Bits
-      value: 2147483647
+      value: 1015
       objectReference: {fileID: 0}
     - target: {fileID: 4245728957341605526, guid: 72944fbde26aed6438ce0e07315e82be,
         type: 3}
